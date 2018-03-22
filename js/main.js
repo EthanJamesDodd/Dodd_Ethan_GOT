@@ -22,8 +22,8 @@ function pauseFunction(){
   vidPlayer.pause();
 }
 
-function rewindFuntion(){
-  
+function rewindFunction(){
+  vidPlayer.currentTime -= 5;
 }
 
 vidPlayer.addEventListener('mouseover', volOn);
@@ -31,5 +31,5 @@ vidPlayer.addEventListener('mouseout', volOff);
 
 playButton.addEventListener('click', playFunction);
 pauseButton.addEventListener('click', pauseFunction);
-rewindButton.addEventListener('click', rewindFuntion)
+rewindButton.addEventListener('click', rewindFunction)
 })();
