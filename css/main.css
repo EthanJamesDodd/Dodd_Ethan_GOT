@@ -9,3 +9,12 @@ body{
   color: #fff;
   font-size: 16px;
 }
+
+.wrapper{
+  width: 90%;
+  margin: 0 auto;
+}
+
+video{
+  width: 100%;
+}
