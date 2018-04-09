@@ -8,7 +8,8 @@
       lightbox = document.querySelector('.lightbox'),
       closeLightBoxButton = lightbox.querySelector('.close-lightbox'),
       videoPlayer = document.querySelector('video'),
-      playButton = document.querySelector('.controls');
+      playButton = document.querySelector('.controls'),
+      imageBanner = document.querySelector('#houseImages');
 
   function showHouseVideo() {
     let houseText = this.className.split(' ')[1].capIt();
@@ -19,6 +20,15 @@
     videoPlayer.src = `video/House-${houseText}.${videoPlayer.currentSrc.split('.')[1]}`;
     videoPlayer.load();
     videoPlayer.play();
+
+    scrollBanners(this.dataset.offset);
+  }
+
+  function scrollBanners(offset) {
+    //Move the banner images
+    let moveIt = offset * 600 + "px";
+
+    imageBanner.style.right = moveIt;
   }
 
   function closeLightBox() {
@@ -47,3 +57,5 @@
   videoPlayer.addEventListener('ended', closeLightBox);
   playButton.addEventListener('click', pausePlay);
 })();
+
+/*Use drumkit example to switch the order of video and banner transition*/
