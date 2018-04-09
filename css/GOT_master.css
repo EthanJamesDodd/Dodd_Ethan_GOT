@@ -19,6 +19,17 @@ h1 {
 	color:white;
 	margin-top:30px;
 	font-size:1.25em;
+  margin-bottom: 25px;
+}
+
+p{
+  font-family: 'GOT_font';
+  color: white;
+	font-size:.75em;
+  display: block;
+  width: 1000px;
+  margin: 0 auto;
+  line-height: 15px;
 }
 
 main {
@@ -38,7 +49,7 @@ main {
 	overflow:hidden;
 }
 
-#houseImages { position:relative; width:4000px; transition: all .5s; }
+#houseImages { position:relative; width:5000px; transition: all .5s; }
 #houseImages img { float:left; }
 
 #bottomNav { margin-top:30px; }
@@ -82,6 +93,12 @@ main {
 
 .arryn { background-position:-253px -54px; }
 .arryn:hover { background-position:-253px 0px; }
+
+.targaryen { background-position:-305px -54px; }
+.targaryen:hover { background-position:-305px 0px; }
+
+.tyrell { background-position:-359px -54px; }
+.tyrell:hover { background-position:-359px 0px; }
 /* ----- end image sprite ----- */
 
 /* ----- classes for transitions ----- */
