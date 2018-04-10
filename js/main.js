@@ -23,18 +23,17 @@
       ];
 
   function showHouseVideo() {
-
-    let houseText = this.className.split(' ')[1].capIt();
-    aboutHouse.textContent = `${houseArray[this.dataset.offset]}`
-    document.querySelector('h1').textContent = `House ${houseText}`;
-    //debugger;
-    lightbox.classList.add('show-lightbox');
-    //Made the vid play
-    videoPlayer.src = `video/House-${houseText}.${videoPlayer.currentSrc.split('.')[1]}`;
-    videoPlayer.load();
-    videoPlayer.play();
-
     scrollBanners(this.dataset.offset);
+    let houseText = this.className.split(' ')[1].capIt();
+      aboutHouse.textContent = `${houseArray[this.dataset.offset]}`
+      document.querySelector('h1').textContent = `House ${houseText}`;
+
+      //debugger;
+      lightbox.classList.add('show-lightbox');
+      //Made the vid play
+      videoPlayer.src = `video/House-${houseText}.${videoPlayer.currentSrc.split('.')[1]}`;
+      videoPlayer.load();
+      videoPlayer.play();
   }
 
   function scrollBanners(offset) {
@@ -42,6 +41,7 @@
     let moveIt = offset * 600 + "px";
 
     imageBanner.style.right = moveIt;
+
 
   }
 
@@ -66,7 +66,7 @@
   }
 
   //Event handling at the bottom
-  sigils.forEach(sigil => sigil.addEventListener('click', showHouseVideo))
+  sigils.forEach(sigil => sigil.addEventListener('click', showHouseVideo));
   closeLightBoxButton.addEventListener('click', closeLightBox);
   videoPlayer.addEventListener('ended', closeLightBox);
   playButton.addEventListener('click', pausePlay);
