@@ -23,26 +23,29 @@
       ];
 
   function showHouseVideo() {
-    scrollBanners(this.dataset.offset);
     let houseText = this.className.split(' ')[1].capIt();
       aboutHouse.textContent = `${houseArray[this.dataset.offset]}`
       document.querySelector('h1').textContent = `House ${houseText}`;
 
-      //debugger;
       lightbox.classList.add('show-lightbox');
       //Made the vid play
       videoPlayer.src = `video/House-${houseText}.${videoPlayer.currentSrc.split('.')[1]}`;
       videoPlayer.load();
       videoPlayer.play();
+      scrollBanners(this.dataset.offset);
+
   }
 
   function scrollBanners(offset) {
     //Move the banner images
+    //let moveIt = this.dataset.offset * 600 + "px";
     let moveIt = offset * 600 + "px";
 
     imageBanner.style.right = moveIt;
+  }
 
-
+  function showLightBox() {
+    console.log('we did it reddit');
   }
 
   function closeLightBox() {
@@ -66,6 +69,10 @@
   }
 
   //Event handling at the bottom
+   const images = Array.from(document.querySelectorAll('#houseImages'));
+   images.forEach(image => image.addEventListener('transitioned', showLightBox));
+   console.log(images);
+
   sigils.forEach(sigil => sigil.addEventListener('click', showHouseVideo));
   closeLightBoxButton.addEventListener('click', closeLightBox);
   videoPlayer.addEventListener('ended', closeLightBox);
