@@ -126,6 +126,12 @@ main {
 	height: 100%;
 	text-align: center;
 	background-color: rgba(0,0,0,0.95);
+  animation: lightBox 3s;
+}
+
+@keyframes lightBox {
+  from{opacity: 0;}
+  to{opacity: 1;}
 }
 
 .close-lightbox {
@@ -156,47 +162,4 @@ video {
   font-size: 3em;
   color: white;
   cursor: pointer;
-}
-
-
-
-/*Keyframes*/
-@keyframes stark {
-  from {right: 0px;}
-  to {right: 0px;}
-}
-
-@keyframes baratheon {
-  from {right:0px;}
-  to {right: 600px;}
-}
-
-@keyframes lannister {
-  from {right: 600px;}
-  to {right: 1200px;}
-}
-
-@keyframes tully {
-  from {right: 1200px;}
-  to {right: 1800px;}
-}
-
-@keyframes greyjot {
-  from {right: 1800px;}
-  to {right: 2400px;}
-}
-
-@keyframes arryn {
-  from {right: 2400px;}
-  to {right: 3000px;}
-}
-
-@keyframes targaryen {
-  from {right: 3000[x];}
-  to {right: 3600px;}
-}
-
-@keyframes tyrell {
-  from {right: 3600px;}
-  to {right: 4200px;}
 }
